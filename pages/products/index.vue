@@ -2,7 +2,7 @@
   <div>
     <div class="grid grid-cols-4 gap-5">
       <div v-for="(product, index) in products" :key="index">
-        <ProductCard :product="product"/>
+        <ProductCard :product="product" />
       </div>
     </div>
   </div>
@@ -11,7 +11,12 @@
 <script setup>
 // custom layout
 definePageMeta({
-//   layout: "products",
+  //   layout: "products",
+});
+
+useHead({
+  title: "Nuxt Dojo | Merch",
+  meta: [{ name: "description", content: "Nuxt 3 Merch" }],
 });
 
 //data fetching
